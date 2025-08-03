@@ -1,0 +1,14 @@
+[Unit]
+Description=n8n instance
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/git/n8n
+ExecStart=/usr/bin/bash start.sh
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target
+
